@@ -16,8 +16,8 @@ public class MovementInMatriz : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        world = FindObjectOfType<MatricialWorld>();
-
+        //find game object world with tag "World" and get the script MatricialWorld
+        world = GameObject.FindGameObjectWithTag("World").GetComponent<MatricialWorld>();
     }
 
     
