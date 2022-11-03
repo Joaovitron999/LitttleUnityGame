@@ -7,6 +7,11 @@ public class SlotScript : MonoBehaviour
     public GameObject[] neighbors = new GameObject[4];
     public GameObject occupant;
     public bool isOccupied = false;
+    
+    //sprite renderer
+    public SpriteRenderer spriteRenderer;
+    public Color occupiedColor = Color.red;
+    public Color freeColor = Color.white;
 
     public void SetOccupant(GameObject newOccupant)
     {
@@ -14,10 +19,12 @@ public class SlotScript : MonoBehaviour
         if(occupant != null)
         {
             isOccupied = true;
+            spriteRenderer.color = occupiedColor;
         }
         else
         {
             isOccupied = false;
+            spriteRenderer.color = freeColor;
         }
     }
 
@@ -25,6 +32,7 @@ public class SlotScript : MonoBehaviour
     void Start()
     {
         SetOccupant(null);   
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     public void SetNeighbors(GameObject[][] world, int i, int j)

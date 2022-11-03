@@ -101,6 +101,9 @@ MonoBehaviour:
   neighbors: []
   occupant: {fileID: 0}
   isOccupied: 0
+  spriteRenderer: {fileID: 54846404432267084}
+  occupiedColor: {r: 1, g: 0, b: 0, a: 1}
+  freeColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &807573017060563484
 GameObject:
   m_ObjectHideFlags: 0
